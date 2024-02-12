@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Instagram Clone</title>
+    <style>
+                 /* Reset default browser styles */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Signup form styles */
+.signup-form {
+    text-align: center;
+}
+
+.signup-form .logo {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.signup-form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.signup-form form {
+    margin-bottom: 20px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3897f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #2779d8;
+}
+
+.signup-form p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.signup-form p a {
+    color: #3897f0;
+    text-decoration: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-form">
+            <img src="Images/Instagram_logo_2022.webp" alt="Instagram Logo" class="logo">
+            <h1>Sign Up to Instagram</h1>
+            <form>
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="text" placeholder="Username">
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>By signing up, you agree to our Terms, Data Policy, and Cookies Policy.</p>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
+</body>
+<script>
+                 document.addEventListener('DOMContentLoaded', function() {
+    // Get the sign-up form
+    var signupForm = document.getElementById('signup-form');
+
+    // Add event listener to the sign-up form
+    signupForm.addEventListener('submit', function(event) {
+        // Prevent form submission
+        event.preventDefault();
+
+        // Get form values
+        var fullName = document.getElementById('fullname').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var username = document.getElementById('username').value;
+
+        // Check if email and password are correct (demo purposes)
+        if (email === 'binjewarkunal@gmail.com' && password === 'kunal123') {
+            // Redirect to the explore page
+            window.location.href = 'explore.html';
+        } else {
+            alert('Invalid email or password. Please try again.');
+        }
+    });
+});
+
+</script>
+</html>
